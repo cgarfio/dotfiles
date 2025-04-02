@@ -1,0 +1,49 @@
+theme = "fleet_dark"
+
+[editor]
+line-number = "relative"
+true-color = true
+completion-replace = true
+rulers = [120]
+color-modes = true
+bufferline = "always"
+end-of-line-diagnostics = "hint"
+
+[editor.statusline]
+center = ["version-control"]
+
+[editor.lsp]
+display-inlay-hints = true
+snippets = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.cursor-shape]
+insert = "underline"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.whitespace]
+render = "none"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[keys.normal]
+C-r = ":rl"                           # reload the buffer from disk
+A-h = ":set file-picker.hidden false" # show ignored files in file picker
+A-H = ":set file-picker.hidden true"  # hidde ignored files in file picker
+
+[keys.insert.j]
+j = "normal_mode"
+k = "normal_mode"

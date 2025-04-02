@@ -1,0 +1,35 @@
+# ==================================================
+# toml
+# ==================================================
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+# ==================================================
+# javascript
+# ==================================================
+[[language]]
+name = "javascript"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+# ==================================================
+# typescript
+# ==================================================
+[[language]]
+name = "typescript"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+# ==================================================
+# rust
+# ==================================================
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
