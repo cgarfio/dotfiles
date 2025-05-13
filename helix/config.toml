@@ -17,7 +17,7 @@ display-inlay-hints = true
 snippets = true
 
 [editor.file-picker]
-hidden = true
+hidden = false
 
 [editor.cursor-shape]
 insert = "underline"
