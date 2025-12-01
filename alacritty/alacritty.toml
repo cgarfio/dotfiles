@@ -9,4 +9,5 @@ option_as_alt = "Both"
 size = 14
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "Google Sans Code"
