@@ -1,4 +1,6 @@
 theme = "focus_nova"
+# theme = "base16_transparent"
+# theme = "modus_operandi"
 
 [editor]
 line-number = "relative"
@@ -7,14 +9,23 @@ completion-replace = true
 # rulers = [80, 100, 120]
 color-modes = true
 bufferline = "multiple"
-end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "disable" # hint
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.statusline]
 center = ["version-control"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.lsp]
 display-inlay-hints = true
 snippets = true
+
+[editor.file-picker]
+hidden = false
 
 [editor.cursor-shape]
 insert = "underline"
@@ -34,11 +45,9 @@ nbsp = "all"
 nnbsp = "all"
 newline = "none"
 
-[editor.inline-diagnostics]
-cursor-line = "error"
-
 [keys.normal]
 C-r = ":rl"
+C-R = ":rla"
 A-h = ":set file-picker.hidden false"
 A-H = ":set file-picker.hidden true"
 A-q = ":buffer-close"
