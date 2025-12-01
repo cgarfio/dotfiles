@@ -1,9 +1,32 @@
 # ==================================================
+# tailwindcss
+# ==================================================
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+# ==================================================
 # toml
 # ==================================================
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+roots = ["."]
+language-servers = ["taplo"]
+
+# ==================================================
+# javascript
+# ==================================================
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+
+# ==================================================
+# css
+# ==================================================
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 
 # ==================================================
 # javascript
@@ -13,6 +36,7 @@ name = "javascript"
 language-servers = [
   "typescript-language-server",
   "vscode-eslint-language-server",
+  "tailwindcss-ls",
 ]
 
 # ==================================================
@@ -20,10 +44,16 @@ language-servers = [
 # ==================================================
 [[language]]
 name = "typescript"
+formatter = { command = "prettierd" }
 language-servers = [
   "typescript-language-server",
   "vscode-eslint-language-server",
+  "tailwindcss-ls",
 ]
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "tailwindcss-ls"]
 
 # ==================================================
 # rust
